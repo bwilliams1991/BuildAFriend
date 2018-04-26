@@ -1,0 +1,26 @@
+{
+  "name": "BuildAFriend",
+  "version": "1.0.0",
+  "description": "Simple Dating app, it can help you meet your match.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bwilliams1991/BuildAFriend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bwilliams1991/BuildAFriend/issues"
+  },
+  "homepage": "https://github.com/bwilliams1991/BuildAFriend#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  }
+}
