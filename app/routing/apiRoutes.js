@@ -11,17 +11,18 @@ module.exports = function (app) {
 	// API GET Requests
 	// ---------------------------------------------------------------------------
 	// GET method route
-	app.get('/', function (req, res) {
-		res.send('GET request to the homepage')
+	app.get('/api/friends', function (req, res) {
+		res.json(friendsData);
 	})
 
 	// API POST Requests
 	// ---------------------------------------------------------------------------
 	// POST method route
-	app.post('/', function (req, res) {
+	app.post('/api/friends', function (req, res) {
 
 		var newFriend = req.body;
-		res.send('POST request to the homepage');
+
+		tableData.push(newFriend);
 	})
 
 };
