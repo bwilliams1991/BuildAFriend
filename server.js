@@ -14,14 +14,15 @@ var PORT = process.env.PORT || 8080;
 // =====================================
 const bodyParser = require("body-parser");
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+app.use(bodyParser.raw({type: 'application/vnd.custom-type'}))
+app.use(bodyParser.text({type: 'text/html'}))
 
 // ROUTES
 // ================================================================================
-require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
+require("./app/routing/apiRoutes.js")(app);
+require("./app/routing/htmlRoutes.js")(app);
 
 
 // LISTENERS
